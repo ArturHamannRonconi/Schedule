@@ -53,7 +53,7 @@ namespace Schedule.views
                 job.Title = textBoxTitle.Text;
                 job.Description = textBoxDescription.Text;
                 job.BeginDateTime = dateTimePickerBeginDate.Value;
-                job.Priorityy = (Priority)comboBoxPriority.SelectedItem;
+                job.Priorityy = (Priority)Enum.Parse(typeof(Priority), comboBoxPriority.SelectedItem.ToString());
                 job.EndDateTime = endDateTime;
             }
             catch (Exception ex)

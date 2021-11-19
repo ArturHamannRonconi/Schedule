@@ -30,10 +30,6 @@ namespace Schedule.views
         private void InitializeComponent()
         {
             this.dataGridViewEvent = new System.Windows.Forms.DataGridView();
-            this.labelFirstGuest = new System.Windows.Forms.Label();
-            this.textBoxFirstGuest = new System.Windows.Forms.TextBox();
-            this.textBoxLocal = new System.Windows.Forms.TextBox();
-            this.labelLocal = new System.Windows.Forms.Label();
             this.checkBoxRepeat = new System.Windows.Forms.CheckBox();
             this.labelType = new System.Windows.Forms.Label();
             this.textBoxType = new System.Windows.Forms.TextBox();
@@ -53,8 +49,19 @@ namespace Schedule.views
             this.labelDescription = new System.Windows.Forms.Label();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
+            this.labelAmount = new System.Windows.Forms.Label();
+            this.numericUpDownAmount = new System.Windows.Forms.NumericUpDown();
+            this.labelUnityReminder = new System.Windows.Forms.Label();
+            this.comboBoxUnityReminder = new System.Windows.Forms.ComboBox();
+            this.labelDayOfWeek = new System.Windows.Forms.Label();
+            this.comboBoxDayOfWeek = new System.Windows.Forms.ComboBox();
+            this.labelEndWhen = new System.Windows.Forms.Label();
+            this.comboBoxEnd = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labelEnd = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEvent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewEvent
@@ -66,40 +73,6 @@ namespace Schedule.views
             this.dataGridViewEvent.RowTemplate.Height = 29;
             this.dataGridViewEvent.Size = new System.Drawing.Size(551, 245);
             this.dataGridViewEvent.TabIndex = 78;
-            // 
-            // labelFirstGuest
-            // 
-            this.labelFirstGuest.AutoSize = true;
-            this.labelFirstGuest.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelFirstGuest.Location = new System.Drawing.Point(619, 374);
-            this.labelFirstGuest.Name = "labelFirstGuest";
-            this.labelFirstGuest.Size = new System.Drawing.Size(100, 25);
-            this.labelFirstGuest.TabIndex = 77;
-            this.labelFirstGuest.Text = "First Guest";
-            // 
-            // textBoxFirstGuest
-            // 
-            this.textBoxFirstGuest.Location = new System.Drawing.Point(619, 402);
-            this.textBoxFirstGuest.Name = "textBoxFirstGuest";
-            this.textBoxFirstGuest.Size = new System.Drawing.Size(323, 27);
-            this.textBoxFirstGuest.TabIndex = 76;
-            // 
-            // textBoxLocal
-            // 
-            this.textBoxLocal.Location = new System.Drawing.Point(619, 335);
-            this.textBoxLocal.Name = "textBoxLocal";
-            this.textBoxLocal.Size = new System.Drawing.Size(323, 27);
-            this.textBoxLocal.TabIndex = 75;
-            // 
-            // labelLocal
-            // 
-            this.labelLocal.AutoSize = true;
-            this.labelLocal.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelLocal.Location = new System.Drawing.Point(619, 307);
-            this.labelLocal.Name = "labelLocal";
-            this.labelLocal.Size = new System.Drawing.Size(56, 25);
-            this.labelLocal.TabIndex = 74;
-            this.labelLocal.Text = "Local";
             // 
             // checkBoxRepeat
             // 
@@ -231,6 +204,7 @@ namespace Schedule.views
             this.buttonSave.TabIndex = 62;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // labelEndDateTime
             // 
@@ -305,16 +279,162 @@ namespace Schedule.views
             this.textBoxTitle.Size = new System.Drawing.Size(551, 27);
             this.textBoxTitle.TabIndex = 55;
             // 
+            // labelAmount
+            // 
+            this.labelAmount.AutoSize = true;
+            this.labelAmount.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelAmount.Location = new System.Drawing.Point(573, 292);
+            this.labelAmount.Name = "labelAmount";
+            this.labelAmount.Size = new System.Drawing.Size(90, 30);
+            this.labelAmount.TabIndex = 80;
+            this.labelAmount.Text = "Amount";
+            // 
+            // numericUpDownAmount
+            // 
+            this.numericUpDownAmount.Location = new System.Drawing.Point(573, 329);
+            this.numericUpDownAmount.Name = "numericUpDownAmount";
+            this.numericUpDownAmount.Size = new System.Drawing.Size(150, 27);
+            this.numericUpDownAmount.TabIndex = 79;
+            // 
+            // labelUnityReminder
+            // 
+            this.labelUnityReminder.AutoSize = true;
+            this.labelUnityReminder.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelUnityReminder.Location = new System.Drawing.Point(739, 292);
+            this.labelUnityReminder.Name = "labelUnityReminder";
+            this.labelUnityReminder.Size = new System.Drawing.Size(63, 30);
+            this.labelUnityReminder.TabIndex = 82;
+            this.labelUnityReminder.Text = "Unity";
+            // 
+            // comboBoxUnityReminder
+            // 
+            this.comboBoxUnityReminder.AutoCompleteCustomSource.AddRange(new string[] {
+            "SECONDS",
+            "MINUTES",
+            "HOURS",
+            "DAYS",
+            "WEEKS",
+            "MONTHS",
+            "YEARS"});
+            this.comboBoxUnityReminder.FormattingEnabled = true;
+            this.comboBoxUnityReminder.Items.AddRange(new object[] {
+            "SECONDS",
+            "MINUTES",
+            "HOURS",
+            "DAYS",
+            "WEEKS",
+            "MONTHS",
+            "YEARS"});
+            this.comboBoxUnityReminder.Location = new System.Drawing.Point(739, 327);
+            this.comboBoxUnityReminder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxUnityReminder.Name = "comboBoxUnityReminder";
+            this.comboBoxUnityReminder.Size = new System.Drawing.Size(203, 28);
+            this.comboBoxUnityReminder.TabIndex = 81;
+            // 
+            // labelDayOfWeek
+            // 
+            this.labelDayOfWeek.AutoSize = true;
+            this.labelDayOfWeek.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelDayOfWeek.Location = new System.Drawing.Point(571, 359);
+            this.labelDayOfWeek.Name = "labelDayOfWeek";
+            this.labelDayOfWeek.Size = new System.Drawing.Size(141, 30);
+            this.labelDayOfWeek.TabIndex = 84;
+            this.labelDayOfWeek.Text = "Day Of Week";
+            // 
+            // comboBoxDayOfWeek
+            // 
+            this.comboBoxDayOfWeek.AutoCompleteCustomSource.AddRange(new string[] {
+            "SECONDS",
+            "MINUTES",
+            "HOURS",
+            "DAYS",
+            "WEEKS",
+            "MONTHS",
+            "YEARS"});
+            this.comboBoxDayOfWeek.FormattingEnabled = true;
+            this.comboBoxDayOfWeek.Items.AddRange(new object[] {
+            "SECONDS",
+            "MINUTES",
+            "HOURS",
+            "DAYS",
+            "WEEKS",
+            "MONTHS",
+            "YEARS"});
+            this.comboBoxDayOfWeek.Location = new System.Drawing.Point(571, 399);
+            this.comboBoxDayOfWeek.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxDayOfWeek.Name = "comboBoxDayOfWeek";
+            this.comboBoxDayOfWeek.Size = new System.Drawing.Size(138, 28);
+            this.comboBoxDayOfWeek.TabIndex = 83;
+            this.comboBoxDayOfWeek.SelectedIndexChanged += new System.EventHandler(this.comboBoxDayOfWeek_SelectedIndexChanged);
+            // 
+            // labelEndWhen
+            // 
+            this.labelEndWhen.AutoSize = true;
+            this.labelEndWhen.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelEndWhen.Location = new System.Drawing.Point(830, 359);
+            this.labelEndWhen.Name = "labelEndWhen";
+            this.labelEndWhen.Size = new System.Drawing.Size(112, 30);
+            this.labelEndWhen.TabIndex = 86;
+            this.labelEndWhen.Text = "End When";
+            // 
+            // comboBoxEnd
+            // 
+            this.comboBoxEnd.AutoCompleteCustomSource.AddRange(new string[] {
+            "SECONDS",
+            "MINUTES",
+            "HOURS",
+            "DAYS",
+            "WEEKS",
+            "MONTHS",
+            "YEARS"});
+            this.comboBoxEnd.FormattingEnabled = true;
+            this.comboBoxEnd.Items.AddRange(new object[] {
+            "SECONDS",
+            "MINUTES",
+            "HOURS",
+            "DAYS",
+            "WEEKS",
+            "MONTHS",
+            "YEARS"});
+            this.comboBoxEnd.Location = new System.Drawing.Point(715, 399);
+            this.comboBoxEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxEnd.Name = "comboBoxEnd";
+            this.comboBoxEnd.Size = new System.Drawing.Size(109, 28);
+            this.comboBoxEnd.TabIndex = 85;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(830, 399);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(112, 27);
+            this.textBox1.TabIndex = 87;
+            // 
+            // labelEnd
+            // 
+            this.labelEnd.AutoSize = true;
+            this.labelEnd.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelEnd.Location = new System.Drawing.Point(718, 359);
+            this.labelEnd.Name = "labelEnd";
+            this.labelEnd.Size = new System.Drawing.Size(49, 30);
+            this.labelEnd.TabIndex = 88;
+            this.labelEnd.Text = "End";
+            // 
             // FormReminder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 539);
+            this.Controls.Add(this.labelEnd);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labelEndWhen);
+            this.Controls.Add(this.comboBoxEnd);
+            this.Controls.Add(this.labelDayOfWeek);
+            this.Controls.Add(this.comboBoxDayOfWeek);
+            this.Controls.Add(this.labelUnityReminder);
+            this.Controls.Add(this.comboBoxUnityReminder);
+            this.Controls.Add(this.labelAmount);
+            this.Controls.Add(this.numericUpDownAmount);
             this.Controls.Add(this.dataGridViewEvent);
-            this.Controls.Add(this.labelFirstGuest);
-            this.Controls.Add(this.textBoxFirstGuest);
-            this.Controls.Add(this.textBoxLocal);
-            this.Controls.Add(this.labelLocal);
             this.Controls.Add(this.checkBoxRepeat);
             this.Controls.Add(this.labelType);
             this.Controls.Add(this.textBoxType);
@@ -335,9 +455,11 @@ namespace Schedule.views
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.textBoxTitle);
             this.Name = "FormReminder";
-            this.Text = "Form1";
+            this.Text = "Schedule";
+            this.Load += new System.EventHandler(this.FormReminder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEvent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,10 +468,6 @@ namespace Schedule.views
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewEvent;
-        private System.Windows.Forms.Label labelFirstGuest;
-        private System.Windows.Forms.TextBox textBoxFirstGuest;
-        private System.Windows.Forms.TextBox textBoxLocal;
-        private System.Windows.Forms.Label labelLocal;
         private System.Windows.Forms.CheckBox checkBoxRepeat;
         private System.Windows.Forms.Label labelType;
         private System.Windows.Forms.TextBox textBoxType;
@@ -369,5 +487,15 @@ namespace Schedule.views
         private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.TextBox textBoxTitle;
+        private System.Windows.Forms.Label labelAmount;
+        private System.Windows.Forms.NumericUpDown numericUpDownAmount;
+        private System.Windows.Forms.Label labelUnityReminder;
+        private System.Windows.Forms.ComboBox comboBoxUnityReminder;
+        private System.Windows.Forms.Label labelDayOfWeek;
+        private System.Windows.Forms.ComboBox comboBoxDayOfWeek;
+        private System.Windows.Forms.Label labelEndWhen;
+        private System.Windows.Forms.ComboBox comboBoxEnd;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labelEnd;
     }
 }

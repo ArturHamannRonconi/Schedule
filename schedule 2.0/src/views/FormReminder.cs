@@ -40,5 +40,20 @@ namespace Schedule.views
             dataGridViewEvent.DataSource = null;
             dataGridViewEvent.DataSource = Reminders;
         }
+
+        private void FormReminder_Load(object sender, EventArgs e)
+        {
+            ListAllSchedule();
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxDayOfWeek_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

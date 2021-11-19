@@ -39,7 +39,7 @@ namespace Schedule.views
         }
         
         private Notification getNewNotification() => new Notification(
-            (Unity)comboBoxUnity.SelectedItem,
+            (Unity)Enum.Parse(typeof(Unity), comboBoxUnity.SelectedItem.ToString()),
             (short)numericUpDownTime.Value,
             textBoxType.Text, checkBoxRepeat.Checked
         );
@@ -51,7 +51,7 @@ namespace Schedule.views
                 var title = textBoxTitle.Text;
                 var description = textBoxDescription.Text;
                 var beginDateTime = dateTimePickerBeginDate.Value;
-                var priority = (Priority)comboBoxPriority.SelectedItem;
+                var priority = (Priority)Enum.Parse(typeof(Priority), comboBoxPriority.SelectedItem.ToString());
 
                 var isValidEndDate = DateTime.TryParse(
                     maskedTextBoxEndDate.Text,

@@ -33,13 +33,19 @@ namespace Schedule.entities
         }
     }
 
-    public class Reminder
+    public class Reminder : Commitment
     {
         public Repeat Repeatt { get; set; }
         public Ends End { get; set; }
         public dynamic WhenEnds { get; set; }
 
-        public Reminder(Repeat repeat, Ends end, dynamic whenEnd)
+        public Reminder(
+            Notification notification, 
+            string title, string description,
+            DateTime beginDateTime, DateTime endDateTime,
+            Repeat repeat, Ends end,
+            dynamic whenEnd
+            ) : base(notification, title, description, beginDateTime, endDateTime)
         {
             Repeatt = repeat;
             End = end;
