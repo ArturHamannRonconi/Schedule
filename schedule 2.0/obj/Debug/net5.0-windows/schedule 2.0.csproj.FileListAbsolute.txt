@@ -1,0 +1,23 @@
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\bin\Debug\net5.0-windows\schedule 2.0.exe
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\bin\Debug\net5.0-windows\schedule 2.0.deps.json
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\bin\Debug\net5.0-windows\schedule 2.0.runtimeconfig.json
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\bin\Debug\net5.0-windows\schedule 2.0.runtimeconfig.dev.json
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\bin\Debug\net5.0-windows\schedule 2.0.dll
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\bin\Debug\net5.0-windows\ref\schedule 2.0.dll
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\bin\Debug\net5.0-windows\schedule 2.0.pdb
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\schedule 2.0.csproj.AssemblyReference.cache
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\Schedule.views.FormAlterEvent.resources
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\Schedule.views.FormEvent.resources
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\Schedule.views.FormNotification.resources
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\Schedule.views.FormShowAll.resources
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\schedule 2.0.csproj.GenerateResource.cache
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\schedule 2.0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\schedule 2.0.AssemblyInfoInputs.cache
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\schedule 2.0.AssemblyInfo.cs
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\schedule 2.0.csproj.CoreCompileInputs.cache
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\schedule 2.0.dll
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\ref\schedule 2.0.dll
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\schedule 2.0.pdb
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\schedule 2.0.genruntimeconfig.cache
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\Schedule.views.FormAlterJob.resources
+C:\Users\Usuário Programador\source\repos\schedule 2.0\schedule 2.0\obj\Debug\net5.0-windows\Schedule.views.FormJob.resources
